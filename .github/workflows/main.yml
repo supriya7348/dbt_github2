@@ -28,6 +28,12 @@ jobs:
       run: |
         docker run --rm -v ${{ github.workspace }}:/usr/src/app -w /usr/src/app xemuliam/dbt dbt docs generate
     
+
+    - name: Commit and Push "target" Folder
+      run: |
+          git add target/
+          git commit -m "Add 'target' folder"
+          git push
     # - name: Serve dbt Documentation
     #   run: |
     #     docker run --rm -v ${{ github.workspace }}:/usr/src/app -p 8080:8080 -w /usr/src/app xemuliam/dbt dbt docs serve
