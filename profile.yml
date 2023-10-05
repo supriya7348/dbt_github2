@@ -1,0 +1,14 @@
+dbtgithub:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: QQFRETD-JJ70402
+      database: dbtdb
+      warehouse: COMPUTE_WH
+      schema: raw
+      role: transform
+      threads: 1
+      user: dbt_sup # jinja to access env var, can use diect also in '.gitlab-cicd.yml' file
+      password: dbt123
+  
