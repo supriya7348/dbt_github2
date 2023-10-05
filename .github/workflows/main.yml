@@ -36,7 +36,7 @@ jobs:
           git add target/
           git commit -m "Add 'target' folder"
           git push
-
+   # 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
     # - name: Serve dbt Documentation
     #   run: |
     #     docker run --rm -v ${{ github.workspace }}:/usr/src/app -p 8080:8080 -w /usr/src/app xemuliam/dbt dbt docs serve
