@@ -30,7 +30,7 @@ jobs:
 
       env:
         GH_TOKEN: ${{ secrets.DBT_SECREAT }}    
-        
+
     - name: Commit and Push "target" Folder
       run: |
         git config --global user.email "priyasupriya2018@gmail.com"
@@ -39,7 +39,7 @@ jobs:
         git commit -m "Add 'target' folder"
         git push https://$GH_TOKEN@github.com/supriya7348/dbt_github2.git HEAD:main
    # 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
-    # - name: Serve dbt Documentation
+    # j- name: Serve dbt Documentation
     #   run: |
     #     docker run --rm -v ${{ github.workspace }}:/usr/src/app -p 8080:8080 -w /usr/src/app xemuliam/dbt dbt docs serve
   
