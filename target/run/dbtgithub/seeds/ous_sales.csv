@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table dbtdb.raw.ous_sales (ProductID integer,Date date,Zip integer,Units integer,Revenue float8)
+  ;
+    -- dbt seed --
+    
+            insert into dbtdb.raw.ous_sales (ProductID, Date, Zip, Units, Revenue) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+        
+
+;
+  

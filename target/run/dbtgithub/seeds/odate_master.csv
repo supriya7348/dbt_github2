@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table dbtdb.raw.odate_master (Year integer,Quarter integer,MonthNo integer,MonthName integer,MonthID integer,Date text)
+  ;
+    -- dbt seed --
+    
+            insert into dbtdb.raw.odate_master (Year, Quarter, MonthNo, MonthName, MonthID, Date) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+        
+
+;
+  

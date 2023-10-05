@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table dbtdb.raw.oproduct_master (ProductID integer,Product text,Category text,Segment text,ManufacturerID integer,Manufacturer text)
+  ;
+    -- dbt seed --
+    
+            insert into dbtdb.raw.oproduct_master (ProductID, Product, Category, Segment, ManufacturerID, Manufacturer) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+        
+
+;
+  
