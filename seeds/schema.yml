@@ -1,0 +1,24 @@
+version: 2
+seeds:
+  - name: oproduct_master
+    description: "csv file contains Product details"
+    columns:
+      - name: ProductID
+        description: "Product ID should be unique"
+        tests:
+          - unique
+
+      - name: Category
+        description: "Category column should accept urban, mix and youth values"
+        tests:
+          - accepted_values:
+              values: ['Urban','Mix','Youth']
+  - name: ous_sales
+    description: "csv file of US sales"
+  
+  - name: odate_master
+    description: "csv file of date, month and year of sales"
+    columns:
+      - name: Date
+        description: "Date column must be in the format 'YYYY-MM-DD'."
+      
