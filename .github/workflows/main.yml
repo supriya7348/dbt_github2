@@ -31,7 +31,7 @@ jobs:
 
     - name: Commit and Push "target" Folder
       run: |
-          git add -f target/
+          git add target/
           git commit -m "Add 'target' folder"
           git push
     # - name: Serve dbt Documentation
