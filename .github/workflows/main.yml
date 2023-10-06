@@ -34,7 +34,7 @@ jobs:
     - name: Commit and Push "target" Folder
       run: |
         git clone https://github.com/supriya7348/dbt_github2.git
-        cd ./dbt_github
+        cd ./dbtgithub
         git config --global user.email "priyasupriya2018@gmail.com"
         git config --global user.name "supriya7348"
         cp -u -r target docs
