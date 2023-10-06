@@ -1,48 +1,41 @@
-name: Run dbt with Docker
+name: dbt Build and Push
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  dbt_job:
+  build:
     runs-on: ubuntu-latest
 
+    container:
+      image: xemuliam/dbt
+
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+      - name: Check out code
+        uses: actions/checkout@v3
 
-    - name: Run dbt Docker Container
-      run: |
-        docker run --rm -v ${{ github.workspace }}:/usr/src/app -w /usr/src/app xemuliam/dbt dbt run
-    # - name: Run dbt seeds
-    #   run: |
-    #     docker run --rm -v ${{ github.workspace }}:/usr/src/app -w /usr/src/app xemuliam/dbt dbt seed
+      - name: Install Git
+        run: |
+          apt-get update
+          apt-get install -y git
 
-    # - name: Run dbt tests
-    #   run: |
-    #     docker run --rm -v ${{ github.workspace }}:/usr/src/app -w /usr/src/app xemuliam/dbt dbt test
-    
-    - name: Generate dbt Documentation
-      run: |
-        docker run --rm -v ${{ github.workspace }}:/usr/src/app -w /usr/src/app xemuliam/dbt dbt docs generate
-
-      env:
-        GH_TOKEN: ${{ SECRETS.DBT_SECREAT }}    
-
-    - name: Commit and Push "target" Folder
-      run: |
-        git clone https://github.com/supriya7348/dbt_github2.git
-        cd ./dbt_github2
-        git config --global user.email "priyasupriya2018@gmail.com"
-        git config --global user.name "supriya7348"
-        cp -u -r target docs
-        git add .
-        git commit -m "Add 'target' folder"
-        git push https://$GH_TOKEN@github.com/supriya7348/dbt_github2.git
-   # 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
-    # j- name: Serve dbt Documentation
-    #   run: |
-    #     docker run --rm -v ${{ github.workspace }}:/usr/src/app -p 8080:8080 -w /usr/src/app xemuliam/dbt dbt docs serve
-  
+      - name: Push changes.
+        env: 
+          git_pass: ${{SECRETS.DBT_SECREAT}} 
+        run: |
+          git clone https://github.com/supriya7348/dbt_github2.git
+                    
+          cd ./dbt_github2
+          git config --global user.email "priyasupriya2018@gmail.com"
+          git config --global user.name "supriya7348"
+          dbt seed
+          dbt docs generate
+          cp -u -r target docs
+          git add .
+          git commit -m "[skip ci] Added pages"
+          git push https://$git_pass@github.com/supriya7348/dbt_github2.git
