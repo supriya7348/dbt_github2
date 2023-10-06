@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "DBTDB"."RAW"."OPRODUCT_MASTER";
+    -- dbt seed --
+    
+            insert into dbtdb.raw.oproduct_master (ProductID, Product, Category, Segment, ManufacturerID, Manufacturer) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+        
+
+;
+  

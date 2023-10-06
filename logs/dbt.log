@@ -698,3 +698,440 @@ with tables as (
 [0m06:40:04.243502 [debug] [MainThread]: Connection 'dbtdb.information_schema' was properly closed.
 [0m06:40:04.243933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3f48694d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3edaede10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3f8dc68d0>]}
 [0m06:40:04.244409 [debug] [MainThread]: Flushing usage events
+[0m07:06:44.302497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c5f11490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c5f10fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c5f113d0>]}
+
+
+============================== 07:06:44.310710 | f706a0a0-2d6b-4890-9c49-c07fb6b9efcb ==============================
+[0m07:06:44.310710 [info ] [MainThread]: Running with dbt=1.6.0
+[0m07:06:44.311465 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/__w/dbt_github2/dbt_github2/dbt_github2', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/__w/dbt_github2/dbt_github2/dbt_github2/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt seed', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:06:44.599424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f706a0a0-2d6b-4890-9c49-c07fb6b9efcb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c4e4f610>]}
+[0m07:06:44.610340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f706a0a0-2d6b-4890-9c49-c07fb6b9efcb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c4e3b510>]}
+[0m07:06:44.611385 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m07:06:44.622248 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m07:06:44.653871 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:06:44.654487 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:06:44.655278 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models
+[0m07:06:44.666626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f706a0a0-2d6b-4890-9c49-c07fb6b9efcb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c4e4dc90>]}
+[0m07:06:44.680970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f706a0a0-2d6b-4890-9c49-c07fb6b9efcb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c1b27d50>]}
+[0m07:06:44.681687 [info ] [MainThread]: Found 3 seeds, 2 tests, 0 sources, 0 exposures, 0 metrics, 372 macros, 0 groups, 0 semantic models
+[0m07:06:44.682231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f706a0a0-2d6b-4890-9c49-c07fb6b9efcb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c4e5e150>]}
+[0m07:06:44.684094 [info ] [MainThread]: 
+[0m07:06:44.685219 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m07:06:44.686949 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbtdb'
+[0m07:06:44.707371 [debug] [ThreadPool]: Using snowflake connection "list_dbtdb"
+[0m07:06:44.708116 [debug] [ThreadPool]: On list_dbtdb: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "connection_name": "list_dbtdb"} */
+show terse schemas in database dbtdb
+    limit 10000
+[0m07:06:44.708623 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:06:46.827886 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.0 seconds
+[0m07:06:46.830118 [debug] [ThreadPool]: On list_dbtdb: Close
+[0m07:06:47.327008 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbtdb, now list_dbtdb_raw)
+[0m07:06:47.338445 [debug] [ThreadPool]: Using snowflake connection "list_dbtdb_raw"
+[0m07:06:47.339040 [debug] [ThreadPool]: On list_dbtdb_raw: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "connection_name": "list_dbtdb_raw"} */
+show terse objects in dbtdb.raw limit 10000
+[0m07:06:47.339476 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:06:48.875108 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m07:06:48.877651 [debug] [ThreadPool]: On list_dbtdb_raw: Close
+[0m07:06:49.360011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f706a0a0-2d6b-4890-9c49-c07fb6b9efcb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64bae94490>]}
+[0m07:06:49.361190 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:06:49.361741 [info ] [MainThread]: 
+[0m07:06:49.373039 [debug] [Thread-1 (]: Began running node seed.dbtgithub.odate_master
+[0m07:06:49.373757 [info ] [Thread-1 (]: 1 of 3 START seed file raw.odate_master ........................................ [RUN]
+[0m07:06:49.374730 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbtdb_raw, now seed.dbtgithub.odate_master)
+[0m07:06:49.375263 [debug] [Thread-1 (]: Began compiling node seed.dbtgithub.odate_master
+[0m07:06:49.375865 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.odate_master (compile): 07:06:49.375625 => 07:06:49.375629
+[0m07:06:49.376388 [debug] [Thread-1 (]: Began executing node seed.dbtgithub.odate_master
+[0m07:06:49.423501 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.odate_master"
+[0m07:06:49.424228 [debug] [Thread-1 (]: On seed.dbtgithub.odate_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.odate_master"} */
+BEGIN
+[0m07:06:49.424798 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:06:50.718404 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m07:06:50.719358 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.odate_master"
+[0m07:06:50.719983 [debug] [Thread-1 (]: On seed.dbtgithub.odate_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.odate_master"} */
+truncate table "DBTDB"."RAW"."ODATE_MASTER"
+  ;
+[0m07:06:51.137875 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:06:51.138759 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.odate_master"
+[0m07:06:51.139447 [debug] [Thread-1 (]: On seed.dbtgithub.odate_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.odate_master"} */
+COMMIT
+[0m07:06:51.515948 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:06:51.539504 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.odate_master"
+[0m07:06:51.540218 [debug] [Thread-1 (]: On seed.dbtgithub.odate_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.odate_master"} */
+BEGIN
+[0m07:06:51.812621 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:06:51.814071 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.odate_master"
+[0m07:06:51.814704 [debug] [Thread-1 (]: On seed.dbtgithub.odate_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.odate_master"} */
+insert into dbtdb.raw.odate_master (Year, Quarter, MonthNo, MonthName, MonthID, Date) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)...
+[0m07:06:52.622690 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 1.0 seconds
+[0m07:06:52.623630 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.odate_master"
+[0m07:06:52.624291 [debug] [Thread-1 (]: On seed.dbtgithub.odate_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.odate_master"} */
+COMMIT
+[0m07:06:53.198402 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m07:06:53.206980 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbtgithub.odate_master"
+[0m07:06:53.236282 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.odate_master (execute): 07:06:49.376747 => 07:06:53.235978
+[0m07:06:53.236920 [debug] [Thread-1 (]: On seed.dbtgithub.odate_master: Close
+[0m07:06:53.708526 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f706a0a0-2d6b-4890-9c49-c07fb6b9efcb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c1b6bd90>]}
+[0m07:06:53.709543 [info ] [Thread-1 (]: 1 of 3 OK loaded seed file raw.odate_master .................................... [[32mINSERT 10[0m in 4.33s]
+[0m07:06:53.710868 [debug] [Thread-1 (]: Finished running node seed.dbtgithub.odate_master
+[0m07:06:53.711535 [debug] [Thread-1 (]: Began running node seed.dbtgithub.oproduct_master
+[0m07:06:53.712707 [info ] [Thread-1 (]: 2 of 3 START seed file raw.oproduct_master ..................................... [RUN]
+[0m07:06:53.714099 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbtgithub.odate_master, now seed.dbtgithub.oproduct_master)
+[0m07:06:53.714753 [debug] [Thread-1 (]: Began compiling node seed.dbtgithub.oproduct_master
+[0m07:06:53.715379 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.oproduct_master (compile): 07:06:53.715134 => 07:06:53.715138
+[0m07:06:53.715874 [debug] [Thread-1 (]: Began executing node seed.dbtgithub.oproduct_master
+[0m07:06:53.724581 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.oproduct_master"
+[0m07:06:53.725188 [debug] [Thread-1 (]: On seed.dbtgithub.oproduct_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.oproduct_master"} */
+BEGIN
+[0m07:06:53.725862 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:06:55.041786 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m07:06:55.042702 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.oproduct_master"
+[0m07:06:55.043257 [debug] [Thread-1 (]: On seed.dbtgithub.oproduct_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.oproduct_master"} */
+truncate table "DBTDB"."RAW"."OPRODUCT_MASTER"
+  ;
+[0m07:06:55.493119 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:06:55.493973 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.oproduct_master"
+[0m07:06:55.494659 [debug] [Thread-1 (]: On seed.dbtgithub.oproduct_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.oproduct_master"} */
+COMMIT
+[0m07:06:55.877946 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:06:55.881697 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.oproduct_master"
+[0m07:06:55.882479 [debug] [Thread-1 (]: On seed.dbtgithub.oproduct_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.oproduct_master"} */
+BEGIN
+[0m07:06:56.156209 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:06:56.157693 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.oproduct_master"
+[0m07:06:56.158333 [debug] [Thread-1 (]: On seed.dbtgithub.oproduct_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.oproduct_master"} */
+insert into dbtdb.raw.oproduct_master (ProductID, Product, Category, Segment, ManufacturerID, Manufacturer) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)...
+[0m07:06:56.824105 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 1.0 seconds
+[0m07:06:56.824954 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.oproduct_master"
+[0m07:06:56.825490 [debug] [Thread-1 (]: On seed.dbtgithub.oproduct_master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.oproduct_master"} */
+COMMIT
+[0m07:06:57.202090 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:06:57.203513 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbtgithub.oproduct_master"
+[0m07:06:57.207445 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.oproduct_master (execute): 07:06:53.716271 => 07:06:57.207208
+[0m07:06:57.207975 [debug] [Thread-1 (]: On seed.dbtgithub.oproduct_master: Close
+[0m07:06:57.695076 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f706a0a0-2d6b-4890-9c49-c07fb6b9efcb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c4e3b550>]}
+[0m07:06:57.696300 [info ] [Thread-1 (]: 2 of 3 OK loaded seed file raw.oproduct_master ................................. [[32mINSERT 10[0m in 3.98s]
+[0m07:06:57.697406 [debug] [Thread-1 (]: Finished running node seed.dbtgithub.oproduct_master
+[0m07:06:57.698112 [debug] [Thread-1 (]: Began running node seed.dbtgithub.ous_sales
+[0m07:06:57.699519 [info ] [Thread-1 (]: 3 of 3 START seed file raw.ous_sales ........................................... [RUN]
+[0m07:06:57.700756 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbtgithub.oproduct_master, now seed.dbtgithub.ous_sales)
+[0m07:06:57.702180 [debug] [Thread-1 (]: Began compiling node seed.dbtgithub.ous_sales
+[0m07:06:57.703814 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.ous_sales (compile): 07:06:57.702705 => 07:06:57.702709
+[0m07:06:57.704387 [debug] [Thread-1 (]: Began executing node seed.dbtgithub.ous_sales
+[0m07:06:57.714686 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.ous_sales"
+[0m07:06:57.715300 [debug] [Thread-1 (]: On seed.dbtgithub.ous_sales: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.ous_sales"} */
+BEGIN
+[0m07:06:57.715843 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:06:59.201995 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m07:06:59.202751 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.ous_sales"
+[0m07:06:59.203257 [debug] [Thread-1 (]: On seed.dbtgithub.ous_sales: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.ous_sales"} */
+truncate table "DBTDB"."RAW"."OUS_SALES"
+  ;
+[0m07:06:59.630337 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:06:59.631191 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.ous_sales"
+[0m07:06:59.631855 [debug] [Thread-1 (]: On seed.dbtgithub.ous_sales: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.ous_sales"} */
+COMMIT
+[0m07:07:00.028582 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:07:00.031652 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.ous_sales"
+[0m07:07:00.032402 [debug] [Thread-1 (]: On seed.dbtgithub.ous_sales: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.ous_sales"} */
+BEGIN
+[0m07:07:00.306134 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:07:00.307488 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.ous_sales"
+[0m07:07:00.308111 [debug] [Thread-1 (]: On seed.dbtgithub.ous_sales: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.ous_sales"} */
+insert into dbtdb.raw.ous_sales (ProductID, Date, Zip, Units, Revenue) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)...
+[0m07:07:00.877355 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 1.0 seconds
+[0m07:07:00.878171 [debug] [Thread-1 (]: Using snowflake connection "seed.dbtgithub.ous_sales"
+[0m07:07:00.878706 [debug] [Thread-1 (]: On seed.dbtgithub.ous_sales: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "seed.dbtgithub.ous_sales"} */
+COMMIT
+[0m07:07:01.275646 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m07:07:01.277326 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbtgithub.ous_sales"
+[0m07:07:01.281930 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.ous_sales (execute): 07:06:57.704759 => 07:07:01.281694
+[0m07:07:01.282469 [debug] [Thread-1 (]: On seed.dbtgithub.ous_sales: Close
+[0m07:07:01.767208 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f706a0a0-2d6b-4890-9c49-c07fb6b9efcb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64bac60610>]}
+[0m07:07:01.768247 [info ] [Thread-1 (]: 3 of 3 OK loaded seed file raw.ous_sales ....................................... [[32mINSERT 10[0m in 4.07s]
+[0m07:07:01.769590 [debug] [Thread-1 (]: Finished running node seed.dbtgithub.ous_sales
+[0m07:07:01.773103 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:07:01.773596 [debug] [MainThread]: Connection 'seed.dbtgithub.ous_sales' was properly closed.
+[0m07:07:01.774061 [info ] [MainThread]: 
+[0m07:07:01.774556 [info ] [MainThread]: Finished running 3 seeds in 0 hours 0 minutes and 17.09 seconds (17.09s).
+[0m07:07:01.775716 [debug] [MainThread]: Command end result
+[0m07:07:01.787790 [info ] [MainThread]: 
+[0m07:07:01.788513 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:07:01.788977 [info ] [MainThread]: 
+[0m07:07:01.789447 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m07:07:01.790343 [debug] [MainThread]: Command `dbt seed` succeeded at 07:07:01.790194 after 17.49 seconds
+[0m07:07:01.790861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c6150610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c5ec8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f64c6141410>]}
+[0m07:07:01.791411 [debug] [MainThread]: Flushing usage events
+[0m07:07:05.065441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f824a38ca50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f824a38d1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8249f39310>]}
+
+
+============================== 07:07:05.068986 | d03abeac-a9fd-4471-b7cd-577210022525 ==============================
+[0m07:07:05.068986 [info ] [MainThread]: Running with dbt=1.6.0
+[0m07:07:05.069858 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/__w/dbt_github2/dbt_github2/dbt_github2', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/__w/dbt_github2/dbt_github2/dbt_github2/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m07:07:05.350579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd03abeac-a9fd-4471-b7cd-577210022525', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f824a056c10>]}
+[0m07:07:05.361351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd03abeac-a9fd-4471-b7cd-577210022525', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8245d44ed0>]}
+[0m07:07:05.362410 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m07:07:05.373344 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m07:07:05.402855 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:07:05.403452 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:07:05.404268 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models
+[0m07:07:05.411934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd03abeac-a9fd-4471-b7cd-577210022525', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8249d6c5d0>]}
+[0m07:07:05.426307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd03abeac-a9fd-4471-b7cd-577210022525', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8245db9950>]}
+[0m07:07:05.427044 [info ] [MainThread]: Found 3 seeds, 2 tests, 0 sources, 0 exposures, 0 metrics, 372 macros, 0 groups, 0 semantic models
+[0m07:07:05.427564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd03abeac-a9fd-4471-b7cd-577210022525', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f824d676490>]}
+[0m07:07:05.429535 [info ] [MainThread]: 
+[0m07:07:05.430613 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m07:07:05.432930 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbtdb_raw'
+[0m07:07:05.454533 [debug] [ThreadPool]: Using snowflake connection "list_dbtdb_raw"
+[0m07:07:05.455167 [debug] [ThreadPool]: On list_dbtdb_raw: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "connection_name": "list_dbtdb_raw"} */
+show terse objects in dbtdb.raw limit 10000
+[0m07:07:05.455606 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:07:07.177003 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m07:07:07.180069 [debug] [ThreadPool]: On list_dbtdb_raw: Close
+[0m07:07:07.654730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd03abeac-a9fd-4471-b7cd-577210022525', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f824a4213d0>]}
+[0m07:07:07.655915 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:07:07.657210 [info ] [MainThread]: 
+[0m07:07:07.660963 [debug] [Thread-1 (]: Began running node test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4
+[0m07:07:07.661796 [info ] [Thread-1 (]: 1 of 2 START test accepted_values_oproduct_master_Category__Urban__Mix__Youth .. [RUN]
+[0m07:07:07.662772 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbtdb_raw, now test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4)
+[0m07:07:07.663324 [debug] [Thread-1 (]: Began compiling node test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4
+[0m07:07:07.685772 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4"
+[0m07:07:07.686705 [debug] [Thread-1 (]: Timing info for test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4 (compile): 07:07:07.663773 => 07:07:07.686403
+[0m07:07:07.687510 [debug] [Thread-1 (]: Began executing node test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4
+[0m07:07:07.713295 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4"
+[0m07:07:07.714811 [debug] [Thread-1 (]: Using snowflake connection "test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4"
+[0m07:07:07.715390 [debug] [Thread-1 (]: On test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        Category as value_field,
+        count(*) as n_records
+
+    from dbtdb.raw.oproduct_master
+    group by Category
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Urban','Mix','Youth'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m07:07:07.715903 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:07:09.155681 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m07:07:09.164979 [debug] [Thread-1 (]: Timing info for test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4 (execute): 07:07:07.687974 => 07:07:09.164654
+[0m07:07:09.165573 [debug] [Thread-1 (]: On test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4: Close
+[0m07:07:09.640950 [info ] [Thread-1 (]: 1 of 2 PASS accepted_values_oproduct_master_Category__Urban__Mix__Youth ........ [[32mPASS[0m in 1.98s]
+[0m07:07:09.642196 [debug] [Thread-1 (]: Finished running node test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4
+[0m07:07:09.642951 [debug] [Thread-1 (]: Began running node test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c
+[0m07:07:09.643602 [info ] [Thread-1 (]: 2 of 2 START test unique_oproduct_master_ProductID ............................. [RUN]
+[0m07:07:09.645301 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4, now test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c)
+[0m07:07:09.646054 [debug] [Thread-1 (]: Began compiling node test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c
+[0m07:07:09.655251 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c"
+[0m07:07:09.656197 [debug] [Thread-1 (]: Timing info for test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c (compile): 07:07:09.646528 => 07:07:09.655887
+[0m07:07:09.656753 [debug] [Thread-1 (]: Began executing node test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c
+[0m07:07:09.660634 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c"
+[0m07:07:09.661865 [debug] [Thread-1 (]: Using snowflake connection "test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c"
+[0m07:07:09.662406 [debug] [Thread-1 (]: On test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "node_id": "test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ProductID as unique_field,
+    count(*) as n_records
+
+from dbtdb.raw.oproduct_master
+where ProductID is not null
+group by ProductID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m07:07:09.662907 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:07:11.141560 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m07:07:11.145325 [debug] [Thread-1 (]: Timing info for test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c (execute): 07:07:09.657121 => 07:07:11.144942
+[0m07:07:11.146037 [debug] [Thread-1 (]: On test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c: Close
+[0m07:07:11.636696 [info ] [Thread-1 (]: 2 of 2 PASS unique_oproduct_master_ProductID ................................... [[32mPASS[0m in 1.99s]
+[0m07:07:11.638251 [debug] [Thread-1 (]: Finished running node test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c
+[0m07:07:11.641536 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:07:11.642053 [debug] [MainThread]: Connection 'test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c' was properly closed.
+[0m07:07:11.642529 [info ] [MainThread]: 
+[0m07:07:11.643257 [info ] [MainThread]: Finished running 2 tests in 0 hours 0 minutes and 6.21 seconds (6.21s).
+[0m07:07:11.644553 [debug] [MainThread]: Command end result
+[0m07:07:11.657985 [info ] [MainThread]: 
+[0m07:07:11.658714 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:07:11.659268 [info ] [MainThread]: 
+[0m07:07:11.659817 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m07:07:11.660648 [debug] [MainThread]: Command `dbt test` succeeded at 07:07:11.660496 after 6.60 seconds
+[0m07:07:11.661178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f824e929f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f824e78af50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f824e7c7f50>]}
+[0m07:07:11.661810 [debug] [MainThread]: Flushing usage events
+[0m07:07:14.868262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63cc6fecd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63cc895b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63cc8b4110>]}
+
+
+============================== 07:07:14.872674 | e1ae7ee2-c916-410a-aecd-4ff4b5d0cd28 ==============================
+[0m07:07:14.872674 [info ] [MainThread]: Running with dbt=1.6.0
+[0m07:07:14.873714 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/__w/dbt_github2/dbt_github2/dbt_github2/logs', 'debug': 'False', 'profiles_dir': '/__w/dbt_github2/dbt_github2/dbt_github2', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs generate', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:07:15.178929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e1ae7ee2-c916-410a-aecd-4ff4b5d0cd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63c695f690>]}
+[0m07:07:15.191056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e1ae7ee2-c916-410a-aecd-4ff4b5d0cd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63cc5da8d0>]}
+[0m07:07:15.192119 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m07:07:15.203192 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m07:07:15.232397 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:07:15.232993 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:07:15.233924 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models
+[0m07:07:15.243533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e1ae7ee2-c916-410a-aecd-4ff4b5d0cd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63c6939710>]}
+[0m07:07:15.246023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e1ae7ee2-c916-410a-aecd-4ff4b5d0cd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63c6838d90>]}
+[0m07:07:15.246667 [info ] [MainThread]: Found 3 seeds, 2 tests, 0 sources, 0 exposures, 0 metrics, 372 macros, 0 groups, 0 semantic models
+[0m07:07:15.247246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1ae7ee2-c916-410a-aecd-4ff4b5d0cd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63cfb5a950>]}
+[0m07:07:15.249661 [info ] [MainThread]: 
+[0m07:07:15.251491 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m07:07:15.253902 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbtdb_raw'
+[0m07:07:15.276023 [debug] [ThreadPool]: Using snowflake connection "list_dbtdb_raw"
+[0m07:07:15.276621 [debug] [ThreadPool]: On list_dbtdb_raw: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "connection_name": "list_dbtdb_raw"} */
+show terse objects in dbtdb.raw limit 10000
+[0m07:07:15.277058 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:07:16.915215 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m07:07:16.918985 [debug] [ThreadPool]: On list_dbtdb_raw: Close
+[0m07:07:17.402357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1ae7ee2-c916-410a-aecd-4ff4b5d0cd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63cc8aa810>]}
+[0m07:07:17.403469 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:07:17.404007 [info ] [MainThread]: 
+[0m07:07:17.408226 [debug] [Thread-1 (]: Began running node seed.dbtgithub.odate_master
+[0m07:07:17.409209 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbtdb_raw, now seed.dbtgithub.odate_master)
+[0m07:07:17.409913 [debug] [Thread-1 (]: Began compiling node seed.dbtgithub.odate_master
+[0m07:07:17.493115 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.odate_master (compile): 07:07:17.410291 => 07:07:17.492727
+[0m07:07:17.493768 [debug] [Thread-1 (]: Began executing node seed.dbtgithub.odate_master
+[0m07:07:17.494400 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.odate_master (execute): 07:07:17.494153 => 07:07:17.494172
+[0m07:07:17.495665 [debug] [Thread-1 (]: Finished running node seed.dbtgithub.odate_master
+[0m07:07:17.496289 [debug] [Thread-1 (]: Began running node seed.dbtgithub.oproduct_master
+[0m07:07:17.497693 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbtgithub.odate_master, now seed.dbtgithub.oproduct_master)
+[0m07:07:17.498377 [debug] [Thread-1 (]: Began compiling node seed.dbtgithub.oproduct_master
+[0m07:07:17.501092 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.oproduct_master (compile): 07:07:17.498779 => 07:07:17.500820
+[0m07:07:17.501619 [debug] [Thread-1 (]: Began executing node seed.dbtgithub.oproduct_master
+[0m07:07:17.502255 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.oproduct_master (execute): 07:07:17.502016 => 07:07:17.502027
+[0m07:07:17.503435 [debug] [Thread-1 (]: Finished running node seed.dbtgithub.oproduct_master
+[0m07:07:17.504147 [debug] [Thread-1 (]: Began running node seed.dbtgithub.ous_sales
+[0m07:07:17.505073 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbtgithub.oproduct_master, now seed.dbtgithub.ous_sales)
+[0m07:07:17.506042 [debug] [Thread-1 (]: Began compiling node seed.dbtgithub.ous_sales
+[0m07:07:17.511176 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.ous_sales (compile): 07:07:17.506434 => 07:07:17.510882
+[0m07:07:17.511797 [debug] [Thread-1 (]: Began executing node seed.dbtgithub.ous_sales
+[0m07:07:17.512466 [debug] [Thread-1 (]: Timing info for seed.dbtgithub.ous_sales (execute): 07:07:17.512220 => 07:07:17.512233
+[0m07:07:17.513965 [debug] [Thread-1 (]: Finished running node seed.dbtgithub.ous_sales
+[0m07:07:17.514621 [debug] [Thread-1 (]: Began running node test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4
+[0m07:07:17.516325 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dbtgithub.ous_sales, now test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4)
+[0m07:07:17.516950 [debug] [Thread-1 (]: Began compiling node test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4
+[0m07:07:17.535541 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4"
+[0m07:07:17.536761 [debug] [Thread-1 (]: Timing info for test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4 (compile): 07:07:17.517374 => 07:07:17.536318
+[0m07:07:17.537338 [debug] [Thread-1 (]: Began executing node test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4
+[0m07:07:17.537968 [debug] [Thread-1 (]: Timing info for test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4 (execute): 07:07:17.537715 => 07:07:17.537731
+[0m07:07:17.539267 [debug] [Thread-1 (]: Finished running node test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4
+[0m07:07:17.539895 [debug] [Thread-1 (]: Began running node test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c
+[0m07:07:17.541288 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbtgithub.accepted_values_oproduct_master_Category__Urban__Mix__Youth.db6874ffd4, now test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c)
+[0m07:07:17.541875 [debug] [Thread-1 (]: Began compiling node test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c
+[0m07:07:17.551139 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c"
+[0m07:07:17.552031 [debug] [Thread-1 (]: Timing info for test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c (compile): 07:07:17.542440 => 07:07:17.551743
+[0m07:07:17.552589 [debug] [Thread-1 (]: Began executing node test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c
+[0m07:07:17.553188 [debug] [Thread-1 (]: Timing info for test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c (execute): 07:07:17.552954 => 07:07:17.552966
+[0m07:07:17.554334 [debug] [Thread-1 (]: Finished running node test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c
+[0m07:07:17.556388 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:07:17.556851 [debug] [MainThread]: Connection 'test.dbtgithub.unique_oproduct_master_ProductID.2466f3e22c' was properly closed.
+[0m07:07:17.558219 [debug] [MainThread]: Command end result
+[0m07:07:17.574149 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m07:07:17.574601 [info ] [MainThread]: Building catalog
+[0m07:07:17.576658 [debug] [ThreadPool]: Acquiring new snowflake connection 'dbtdb.information_schema'
+[0m07:07:17.587466 [debug] [ThreadPool]: Using snowflake connection "dbtdb.information_schema"
+[0m07:07:17.588077 [debug] [ThreadPool]: On dbtdb.information_schema: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "dbtgithub", "target_name": "dev", "connection_name": "dbtdb.information_schema"} */
+with tables as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+              table_type as "table_type",
+              comment as "table_comment",
+
+              -- note: this is the _role_ that owns the table
+              table_owner as "table_owner",
+
+              'Clustering Key' as "stats:clustering_key:label",
+              clustering_key as "stats:clustering_key:value",
+              'The key used to cluster this table' as "stats:clustering_key:description",
+              (clustering_key is not null) as "stats:clustering_key:include",
+
+              'Row Count' as "stats:row_count:label",
+              row_count as "stats:row_count:value",
+              'An approximate count of rows in this table' as "stats:row_count:description",
+              (row_count is not null) as "stats:row_count:include",
+
+              'Approximate Size' as "stats:bytes:label",
+              bytes as "stats:bytes:value",
+              'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+              (bytes is not null) as "stats:bytes:include",
+
+              'Last Modified' as "stats:last_modified:label",
+              to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+              'The timestamp for last update/change' as "stats:last_modified:description",
+              (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+
+          from dbtdb.INFORMATION_SCHEMA.tables
+          where (upper("table_schema") = upper('raw'))
+
+      ),
+
+      columns as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+
+              column_name as "column_name",
+              ordinal_position as "column_index",
+              data_type as "column_type",
+              comment as "column_comment"
+
+          from dbtdb.INFORMATION_SCHEMA.columns
+          where (upper("table_schema") = upper('raw'))
+      )
+
+      select *
+      from tables
+      join columns using ("table_database", "table_schema", "table_name")
+      order by "column_index"
+[0m07:07:17.588656 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:07:20.680090 [debug] [ThreadPool]: SQL status: SUCCESS 18 in 3.0 seconds
+[0m07:07:20.691536 [debug] [ThreadPool]: On dbtdb.information_schema: Close
+[0m07:07:21.186115 [info ] [MainThread]: Catalog written to /__w/dbt_github2/dbt_github2/dbt_github2/target/catalog.json
+[0m07:07:21.187269 [debug] [MainThread]: Command `dbt docs generate` succeeded at 07:07:21.187094 after 6.33 seconds
+[0m07:07:21.187754 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m07:07:21.189340 [debug] [MainThread]: Connection 'dbtdb.information_schema' was properly closed.
+[0m07:07:21.189883 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63cc242110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63cc243ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63cc895250>]}
+[0m07:07:21.190451 [debug] [MainThread]: Flushing usage events

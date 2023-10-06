@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "DBTDB"."RAW"."OUS_SALES";
+    -- dbt seed --
+    
+            insert into dbtdb.raw.ous_sales (ProductID, Date, Zip, Units, Revenue) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+        
+
+;
+  
