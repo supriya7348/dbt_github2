@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "DBTDB"."RAW"."ODATE_MASTER";
+    -- dbt seed --
+    
+            insert into dbtdb.raw.odate_master (Year, Quarter, MonthNo, MonthName, MonthID, Date) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+        
+
+;
+  
