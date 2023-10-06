@@ -26,7 +26,7 @@ jobs:
 
       - name: Push changes.
         env: 
-          git_pass: ${{SECRETS.DBT_SECREAT}} 
+          git_pass: ${{SECRETS.DBT}} 
         run: |
           git clone https://github.com/supriya7348/dbt_github2.git
                     
