@@ -37,7 +37,7 @@ jobs:
         git config --global user.name "supriya7348"
         git add target/
         git commit -m "Add 'target' folder"
-        git push https://$secrets.DBT_SECREAT@github.com/supriya7348/dbt_github2.git HEAD:main
+        git push https://$GH_TOKEN@github.com/supriya7348/dbt_github2.git
    # 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
     # j- name: Serve dbt Documentation
     #   run: |
