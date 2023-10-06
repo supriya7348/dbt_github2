@@ -16,9 +16,9 @@ jobs:
     - name: Run dbt Docker Container
       run: |
         docker run --rm -v ${{ github.workspace }}:/usr/src/app -w /usr/src/app xemuliam/dbt dbt run
-    - name: Run dbt seeds
-      run: |
-        docker run --rm -v ${{ github.workspace }}:/usr/src/app -w /usr/src/app xemuliam/dbt dbt seed
+    # - name: Run dbt seeds
+    #   run: |
+    #     docker run --rm -v ${{ github.workspace }}:/usr/src/app -w /usr/src/app xemuliam/dbt dbt seed
 
     - name: Run dbt tests
       run: |
