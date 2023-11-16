@@ -1,4 +1,4 @@
-
+#gsFGfs
 name: dbt Build and Push
 
 on:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Push changes.
         env: 
-          git_pass: ${{SECRETS.DBT}} 
+          git_pass: ${{SECRETS.gitpass}} 
           gitp: ${{SECRETS.gitp}}
           gitu: ${{SECRETS.gitu}}
         run: |
