@@ -1,4 +1,4 @@
-{% macro generate_source(database_name='RAW', schema_name='JAFFLE_SHOP', generate_columns=False, include_descriptions=False, include_data_types=True, table_pattern='%', exclude='', name=schema_name, table_names=['customers', 'orders'], include_database=False, include_schema=False) %}
+{% macro generate_source(database_name='RAW', schema_name='JAFFLE_SHOP', generate_columns=False, include_descriptions=False, include_data_types=True, table_pattern='%', exclude='', name=schema_name, table_names=['customers', 'orders'],execute=False, include_database=False, include_schema=False) %}
 
 {% set sources_yaml=[] %}
 {% do sources_yaml.append('version: 2') %}
