@@ -31,6 +31,7 @@ jobs:
           gitp: ${{SECRETS.gitp}}
           gitu: ${{SECRETS.gitu}}
         run: |
+          dbt run
           apt-get install -y git
           dbt --help
           # git clone https://github.com/supriya7348/dbt_github2.git

@@ -1,3 +1,3 @@
-{{ codegen.generate_model_import_ctes(
-    model_name = 'stg_orders'
+{{ codegen.generate_model_yaml(
+    model_names=['customers']
 ) }}
