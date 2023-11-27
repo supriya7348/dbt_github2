@@ -1,0 +1,1 @@
+{{ codegen.generate_source(schema_name= 'jaffle_shop', database_name= 'RAW', table_names=['customers','orders'],include_schema=True,include_database=False,include_descriptions=True,generate_columns=True,include_data_types=True) }}
