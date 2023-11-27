@@ -1,0 +1,23 @@
+-- -- macros/source_macros.sql
+
+-- {% macro generate_source(database_name, schema_name, table_name, execute=True) %}
+--   {% set sources_yaml = [] %}
+--   {% do sources_yaml.append('version: 2') %}
+--   {% do sources_yaml.append('') %}
+--   {% do sources_yaml.append('sources:') %}
+--   {% do sources_yaml.append('  - name: ' ~ schema_name | lower) %}
+--   {% do sources_yaml.append('    database: ' ~ database_name | lower) %}
+--   {% do sources_yaml.append('    schema: ' ~ schema_name | lower) %}
+--   {% do sources_yaml.append('    tables:') %}
+--     {% for table in table_name %}
+--     {% do sources_yaml.append('      - name: ' ~ table.name | lower) %}
+--         {% if table.description %}
+--             {% do sources_yaml.append('        description: "' ~ table.description ~ '"') %}
+--         {% endif %}
+--     {% endfor %}
+--   {% if execute %}
+--     {% set joined = sources_yaml | join('\n') %}
+--     {{ log(joined, info=True) }}
+--     {% do return(joined) %}
+--   {% endif %}
+-- {% endmacro %}
